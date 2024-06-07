@@ -1,0 +1,47 @@
+[
+    {
+        "title": "Smartphone Usage Survey",
+        "description": "This survey aims to understand how people use smartphones in their daily lives.",
+        "category": "Phone",
+        "votes": 1500,
+        "_id": "60d0fe4f5311236168a109e1",
+        "date": "2024-06-01",
+        "options": null
+    },
+    {
+        "title": "Internet Usage Survey",
+        "description": "This survey collects data on internet usage patterns and preferences.",
+        "category": "Internet",
+        "votes": 1200,
+        "_id": "60d0fe4f5311236168a109e2",
+        "date": "2024-06-02",
+        "options": "Yes"
+    },
+    {
+        "title": "Home Automation Adoption Survey",
+        "description": "This survey aims to understand the adoption and usage of home automation technologies.",
+        "category": "Home Automation",
+        "votes": 1800,
+        "_id": "60d0fe4f5311236168a109e3",
+        "date": "2024-05-28",
+        "options": null
+    },
+    {
+        "title": "Wearable Technology Adoption Survey",
+        "description": "This survey collects information on the adoption and usage of wearable technologies.",
+        "category": "Wearable Technology",
+        "votes": 2500,
+        "_id": "60d0fe4f5311236168a109e4",
+        "date": "2024-06-03",
+        "options": null
+    },
+    {
+        "title": "Cloud Storage Adoption Survey",
+        "description": "This survey gathers data on the adoption and usage of cloud storage services.",
+        "category": "Cloud Storage",
+        "votes": 1500,
+        "_id": "60d0fe4f5311236168a109e5",
+        "date": "2024-05-27",
+        "options": null
+    }
+]

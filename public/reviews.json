@@ -1,0 +1,27 @@
+[
+    {
+      "_id": "1",
+      "question": "What is this website about?",
+      "answer": "This website allows users to create, participate in, and analyze surveys. It's a platform for gathering opinions and insights on various topics."
+    },
+    {
+      "_id": "2",
+      "question": "How do I create an account?",
+      "answer": "Click on the 'Sign Up' button on the homepage and fill in your details. You can also sign up using your social media accounts."
+    },
+    {
+      "_id": "3",
+      "question": "How do I participate in a survey?",
+      "answer": "Browse through the available surveys on the Surveys Page and click on the one you are interested in. If you are logged in, you can vote and submit your response."
+    },
+    {
+      "_id": "4",
+      "question": "Can I create my own surveys?",
+      "answer": "Yes, if you are a surveyor, you can create and publish surveys through the Surveyor Dashboard. Regular users need to upgrade to a surveyor role to create surveys."
+    },
+    {
+      "_id": "5",
+      "question": "What are the benefits of becoming a pro-user?",
+      "answer": "Pro-users can add comments to surveys, access detailed survey analytics, and enjoy an ad-free experience. They also get priority support."
+    }
+  ]
