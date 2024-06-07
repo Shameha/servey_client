@@ -1,15 +1,49 @@
 // import React from 'react';
 
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import Swal from "sweetalert2";
+
 const Login = () => {
+
+const {signIn} = useContext(AuthContext);
+
     const handleLogin = event =>{
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
         console.log(email,password);
+        signIn(email,password)
+        .then(result =>{
+          const user = result.user;
+          console.log(user);
+          Swal.fire({
+            title: "user login successfully.",
+            showClass: {
+              popup: `
+                animate__animated
+                animate__fadeInUp
+                animate__faster
+              `
+            },
+            hideClass: {
+              popup: `
+                animate__animated
+                animate__fadeOutDown
+                animate__faster
+              `
+            }
+          });
+        })
     }
     return (
+     <>
+      <Helmet><title>SurveySleuth | LogIn</title></Helmet>
         <div className="hero min-h-screen bg-base-200">
+
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
@@ -36,9 +70,11 @@ const Login = () => {
                 <input className="btn btn-primary" type="submit" value="submit" />
               </div>
             </form>
+           <p>New here<Link to="/signup"> <span className="text-green-600 font-bold">create an account</span> </Link></p>
           </div>
         </div>
       </div>
+     </>
     );
 };
 
