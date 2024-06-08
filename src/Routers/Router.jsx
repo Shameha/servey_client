@@ -7,6 +7,8 @@ import Survey from "../Pages/SurvayMenu/Survey";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import VotePage from "../Pages/VotePage/VotePage";
+import Dashboard from "../Layout/Dashboard";
+import Create from "../Pages/Dashboard/Create/Create";
 
 
  export const router = createBrowserRouter([
@@ -40,4 +42,14 @@ import VotePage from "../Pages/VotePage/VotePage";
         }
       ]
     },
+    {
+      path:'dashboard',
+      element:<Dashboard></Dashboard>,
+      children:[
+        {
+          path:'create',
+          element:<Create></Create>
+        }
+      ]
+    }
   ]);
