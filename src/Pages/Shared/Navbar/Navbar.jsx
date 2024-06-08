@@ -20,7 +20,7 @@ logOut()
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/servey'>Surveys Page</Link></li>
     <li><Link to='/payment'>Payment Page</Link></li>
-    <li><Link to='/das'>Payment Page</Link></li>
+    <li><Link to='/dasboard'>Dashboard</Link></li>
     
     {
       user? <><button onClick={handleLogOut} className="btn btn-ghost">Log out</button></> : <><li><Link to='/login'>Login</Link></li></>
