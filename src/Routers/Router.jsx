@@ -6,6 +6,7 @@ import Home from "../Pages/Home/Home/Home";
 import Survey from "../Pages/SurvayMenu/Survey";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import VotePage from "../Pages/VotePage/VotePage";
 
 
  export const router = createBrowserRouter([
@@ -31,6 +32,11 @@ import SignUp from "../Pages/SignUp/SignUp";
         {
             path:'/signup',
             element:<SignUp></SignUp>
+        },
+        {
+            path:'/checkout/:id',
+            element:<VotePage></VotePage>,
+            loader:({params})=>fetch(`http://localhost:5000/servey/${params.id}`)
         }
       ]
     },
