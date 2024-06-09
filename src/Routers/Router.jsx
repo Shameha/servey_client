@@ -10,6 +10,9 @@ import VotePage from "../Pages/VotePage/VotePage";
 import Dashboard from "../Layout/Dashboard";
 import Create from "../Pages/Dashboard/Create/Create";
 import PrivateRoute from "./PrivateRoute";
+import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
+import SurveyPage from "../Pages/Dashboard/SurveyPage/SurveyPage";
+import AdminPay from "../Pages/Dashboard/AdminPay/AdminPay";
 
 
  export const router = createBrowserRouter([
@@ -50,6 +53,21 @@ import PrivateRoute from "./PrivateRoute";
         {
           path:'create',
           element:<Create></Create>
+          
+        },
+        {
+          path:'users',
+          element:<AllUsers></AllUsers>
+          
+        },
+        {
+          path:'surveys',
+          element:<SurveyPage></SurveyPage>
+          
+        },
+        {
+          path:'payment',
+          element:<AdminPay></AdminPay>
           
         }
       ]

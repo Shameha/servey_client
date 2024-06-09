@@ -3,7 +3,7 @@
 const Create = () => {
     return (
         <div>
-            <h1 className="text-6xl">create your vote</h1>
+            <h1 className="text-6xl">here create</h1>
         </div>
     );
 };
