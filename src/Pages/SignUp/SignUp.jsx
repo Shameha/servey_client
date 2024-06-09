@@ -4,11 +4,14 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import SocialLogin from "../../Componants/SocialLogin/SocialLogin";
 
 // import React from 'react';
 
 
 const SignUp = () => {
+  const axiosPublic= useAxiosPublic()
     const {
         register,
         handleSubmit,
@@ -27,15 +30,24 @@ const SignUp = () => {
             updateUseprofile(data.name,data.image)
             .then(()=>{
                 console.log("user profile");
-                reset();
-                Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "Your work has been saved",
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-                  navigate('/');
+                const userInfo ={
+                  name:data.name,
+                  email:data.email
+                }
+                axiosPublic.post('/users',userInfo)
+                .then(res =>{
+                  if(res.data.insertedId){
+                    reset();
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Your work has been saved",
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
+                      navigate('/');
+                  }
+                })
             })
             .catch(error => console.log(error))
         })
@@ -48,7 +60,7 @@ const SignUp = () => {
 
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Login now!</h1>
+            <h1 className="text-5xl font-bold">SignUp now!</h1>
             <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -88,7 +100,8 @@ const SignUp = () => {
                 <input className="btn btn-primary" type="submit" value="Submit" />
               </div>
             </form>
-            <p>Already have an account <Link to="/login"> <span className="text-green-600 font-bold">Login</span> </Link></p>
+            <p className="px-6">Already have an account <Link to="/login"> <span className="text-green-600 font-bold">Login</span> </Link></p>
+          <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>

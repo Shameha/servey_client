@@ -9,6 +9,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import VotePage from "../Pages/VotePage/VotePage";
 import Dashboard from "../Layout/Dashboard";
 import Create from "../Pages/Dashboard/Create/Create";
+import PrivateRoute from "./PrivateRoute";
 
 
  export const router = createBrowserRouter([
@@ -44,11 +45,12 @@ import Create from "../Pages/Dashboard/Create/Create";
     },
     {
       path:'dashboard',
-      element:<Dashboard></Dashboard>,
+      element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
       children:[
         {
           path:'create',
           element:<Create></Create>
+          
         }
       ]
     }

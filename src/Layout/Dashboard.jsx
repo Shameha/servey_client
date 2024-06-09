@@ -4,6 +4,8 @@ import { NavLink, Outlet } from "react-router-dom";
 import { MdCreateNewFolder } from "react-icons/md";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { MdSystemUpdateAlt } from "react-icons/md";
+// import Navbar from "../Pages/Shared/Navbar/Navbar";
+// import Footer from "../Pages/Shared/Footer/Footer";
 
 const Dashboard = () => {
     return (
@@ -15,8 +17,10 @@ const Dashboard = () => {
                 <li><NavLink to="/dashboard/update"><MdSystemUpdateAlt />Update</NavLink></li>
               </ul>
             </div>
+             
             <div className="flex-1 p-8">
                 <Outlet></Outlet>
+                
             </div>
         </div>
     );
