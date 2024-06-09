@@ -11,14 +11,33 @@ const AllUsers = () => {
     const {data:users =[],refetch} = useQuery({
         queryKey:['users'],
         queryFn: async () =>{
-       const res = await axiosSecure.get('/users')
+       const res = await axiosSecure.get('/users',{
+        headers:{
+            authorization:`bearer ${localStorage.getItem('access token')}`
+        }
+       })
        return res.data;
         }
     })
 
-const handleMakeAdmin = user =>[
-    
-]
+const handleMakeAdminAndSurvey = user =>{
+
+axiosSecure.patch(`/users/admin/${user._id}`)
+.then(res=>{
+    console.log(res.data);
+    if(res.data.modifiedCount >0){
+        refetch();
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: `${user.name} is admin`,
+            showConfirmButton: false,
+            timer: 1500
+          });
+    }
+})
+
+}
 
     const  handleDelete = user =>{
 //   console.log(user);
@@ -61,8 +80,8 @@ Swal.fire({
         <th></th>
         <th>Name</th>
         <th>email</th>
-        <th>Role</th>
-        <th>permision Role</th>
+        <th>Admin Role</th>
+        <th>Survey Role</th>
         {/* <th>Action</th> */}
       </tr>
     </thead>
@@ -74,11 +93,11 @@ Swal.fire({
         <td>{user.email}</td>
        {/* admin */}
         <td>
-        <button onClick={()=> handleMakeAdmin(user)} className="btn btn-primary"><IoPeopleOutline /></button> 
+       {user.role === 'admin' ? 'Admin': <button onClick={()=> handleMakeAdminAndSurvey(user)} className="btn btn-primary"><IoPeopleOutline /></button> }
         </td>
         {/* survay */}
         <td>
-        <button className="btn btn-secondary"><SiLinuxserver /></button>
+        {user.role === 'survey'?'Survey':<button onClick={()=> handleMakeAdminAndSurvey(user)} className="btn btn-secondary"><SiLinuxserver /></button>}
         </td>
         <td>
         <button onClick={()=>handleDelete(user)} className="btn btn-accent">Delete</button>
