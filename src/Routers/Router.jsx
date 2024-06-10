@@ -54,7 +54,7 @@ import Pay from "../Pages/PaymentPage/Pay";
         {
             path:'/checkout/:id',
             element:<VotePage></VotePage>,
-            loader:({params})=>fetch(`http://localhost:5000/servey/${params.id}`)
+            loader:({params})=>fetch(`https://assignment12-server-theta.vercel.app/servey/${params.id}`)
         }
       ]
     },

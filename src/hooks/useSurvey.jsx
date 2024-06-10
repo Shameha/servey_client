@@ -6,7 +6,7 @@ const useSurvey = () => {
     const[servey,setServey]= useState([]);
     const[loading,setLoading]=useState(true);
     useEffect(()=>{
-        fetch('http://localhost:5000/servey')
+        fetch('https://assignment12-server-theta.vercel.app/servey')
         .then(res => res.json())
         .then(data =>{
 setServey(data);
