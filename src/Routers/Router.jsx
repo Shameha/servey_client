@@ -69,6 +69,11 @@ import AdminPay from "../Pages/Dashboard/AdminPay/AdminPay";
           path:'payment',
           element:<AdminPay></AdminPay>
           
+        },
+        {
+          path:'update',
+          element:<AdminPay></AdminPay>
+          
         }
       ]
     }

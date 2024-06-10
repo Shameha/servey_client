@@ -5,12 +5,15 @@ import { MdCreateNewFolder } from "react-icons/md";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { MdSystemUpdateAlt } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
+import useAdmin from "../hooks/useAdmin";
+// import useSurve from "../hooks/useSurve";
 // import Navbar from "../Pages/Shared/Navbar/Navbar";
 // import Footer from "../Pages/Shared/Footer/Footer";
 
 const Dashboard = () => {
   
-  const isAdmin = true;
+  const [isAdmin] = useAdmin();
+  // const [isServey] = useSurve();
   const isServey = true;
   return (
     <div className="flex">
