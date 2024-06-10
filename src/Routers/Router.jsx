@@ -14,6 +14,7 @@ import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import SurveyPage from "../Pages/Dashboard/SurveyPage/SurveyPage";
 import AdminPay from "../Pages/Dashboard/AdminPay/AdminPay";
 import PaymentPage from "../Pages/PaymentPage/PaymentPage";
+import Pay from "../Pages/PaymentPage/Pay";
 
 
  export const router = createBrowserRouter([
@@ -43,6 +44,11 @@ import PaymentPage from "../Pages/PaymentPage/PaymentPage";
         {
           path:'payment',
           element:<PaymentPage></PaymentPage>
+          
+        },
+        {
+          path:'pay',
+          element:<Pay></Pay>
           
         },
         {
