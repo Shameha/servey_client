@@ -13,6 +13,7 @@ import PrivateRoute from "./PrivateRoute";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import SurveyPage from "../Pages/Dashboard/SurveyPage/SurveyPage";
 import AdminPay from "../Pages/Dashboard/AdminPay/AdminPay";
+import PaymentPage from "../Pages/PaymentPage/PaymentPage";
 
 
  export const router = createBrowserRouter([
@@ -38,6 +39,11 @@ import AdminPay from "../Pages/Dashboard/AdminPay/AdminPay";
         {
             path:'/signup',
             element:<SignUp></SignUp>
+        },
+        {
+          path:'payment',
+          element:<PaymentPage></PaymentPage>
+          
         },
         {
             path:'/checkout/:id',
