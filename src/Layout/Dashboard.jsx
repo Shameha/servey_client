@@ -9,6 +9,7 @@ import { FaHome } from "react-icons/fa";
 // import Footer from "../Pages/Shared/Footer/Footer";
 
 const Dashboard = () => {
+  
   const isAdmin = true;
   const isServey = true;
   return (
