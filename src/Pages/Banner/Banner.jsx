@@ -32,7 +32,7 @@ const Banner = () => {
             <SwiperSlide>
                 <div className="slide slide1  ">
 
-                    <h2 className="absolute inset-x-0 text-2xl lg:text-5xl text-center top-28 lg:top-32 text-white font-bold  lg:font-extrabold font-popins">Welcome to PollPilot</h2>
+                    <h2 className="absolute inset-x-0 text-2xl lg:text-5xl text-center top-28 lg:top-32 text-white font-bold  lg:font-extrabold font-popins">Welcome to SurveySleuth</h2>
                     <h2 className="absolute inset-x-0 text-center top-1/2 lg:top-48 text-white font-medium lg:text-2xl font-popins ">A person who voluntarily undertakes or expresses <br /> a willingness to undertake a service</h2>
                     <button className="btn btn-active btn-accent">Accent</button>
              
@@ -41,20 +41,20 @@ const Banner = () => {
 
             <SwiperSlide>
                 <div className="slide slide2 ">
-                    <h2 className="absolute inset-x-0 text-2xl lg:text-5xl text-center top-28 lg:top-32 text-white font-bold  lg:font-extrabold font-popins">Welcome to PollPilot</h2>
+                    <h2 className="absolute inset-x-0 text-2xl lg:text-5xl text-center top-28 lg:top-32 text-white font-bold  lg:font-extrabold font-popins">Welcome to SurveySleuth</h2>
                     <h2 className="absolute inset-x-0 text-center top-1/2 lg:top-48 text-white font-medium lg:text-2xl font-popins">A person who voluntarily undertakes or expresses <br /> a willingness to undertake a service </h2>
                 </div>
             </SwiperSlide>
 
             <SwiperSlide>
                 <div className="slide slide3">
-                    <h2 className="absolute inset-x-0 text-2xl lg:text-5xl text-center top-28 lg:top-32 text-white font-bold  lg:font-extrabold font-popins">Welcome to PollPilot</h2>
+                    <h2 className="absolute inset-x-0 text-2xl lg:text-5xl text-center top-28 lg:top-32 text-white font-bold  lg:font-extrabold font-popins">Welcome to SurveySleuth</h2>
                     <h2 className="absolute inset-x-0 text-center top-1/2 lg:top-48 text-white font-medium lg:text-2xl font-popins ">A person who voluntarily undertakes or expresses <br /> a willingness to undertake a service</h2>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="slide slide4">
-                    <h2 className="absolute inset-x-0 text-2xl lg:text-5xl text-center top-28 lg:top-32 text-white font-bold  lg:font-extrabold font-popins">Welcome to PollPilot</h2>
+                    <h2 className="absolute inset-x-0 text-2xl lg:text-5xl text-center top-28 lg:top-32 text-white font-bold  lg:font-extrabold font-popins">Welcome to SurveySleuth</h2>
                     <h2 className="absolute inset-x-0 text-center top-1/2 lg:top-48 text-white font-medium lg:text-2xl font-popins ">A person who voluntarily undertakes or expresses <br /> a willingness to undertake a service</h2>
                 </div>
             </SwiperSlide>
