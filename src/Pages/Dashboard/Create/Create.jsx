@@ -2,12 +2,26 @@
 
 import { useForm } from "react-hook-form";
 import SectionTitle from "../../../Componants/SectionTitle/SectionTitle";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 // import { FaUtensils } from "react-icons/fa";
 
 const Create = () => {
     const { register, handleSubmit } = useForm()
-  const onSubmit = (data) => {
+    const axiosPublic = useAxiosPublic();
+  const onSubmit = async (data) => {
     console.log(data)
+   
+      const res = await axiosPublic.post('/servey')
+      
+    if(res.data.success){
+      // const survey = {
+      //   category: data.cetegory,
+      //   date: data.date,
+      //   qus: data.qus,
+      //   vote:data.vote
+      // }
+    }
+    console.log(res.data.survey);
   }
     return (
         <div>
