@@ -3,6 +3,9 @@
 import { Link } from "react-router-dom";
 import SectionTitle from "../../Componants/SectionTitle/SectionTitle";
 
+
+
+
 const PaymentPage = () => {
     return (
         <div>
@@ -24,9 +27,9 @@ const PaymentPage = () => {
       {/* row 1 */}
       <tr>
         <th>1</th>
-        <td>phone</td>
-        <td>Smartphone</td>
-        <td><Link to='/pay'><button className="btn btn-accent">Accent</button></Link></td>
+        <td>membership</td>
+        <td>Servey</td>
+        <td><Link to='/pay'><button className="btn btn-accent">Pay</button></Link></td>
       </tr>
     </tbody>
   </table>

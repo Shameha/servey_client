@@ -3,7 +3,7 @@
 import axios from "axios";
 
 const axiosPublic = axios.create({
-     baseURL: 'https://assignment12-server-theta.vercel.app'
+     baseURL: 'https://b9a12-server-side-shameha.vercel.app'
 })
 const useAxiosPublic = () => {
     return axiosPublic;

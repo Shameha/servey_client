@@ -4,7 +4,7 @@ import useAuth from "./useAuth";
 
 // import React from 'react';
 export const axiosSecure = axios.create({
-    baseURL: 'https://assignment12-server-theta.vercel.app'
+    baseURL: 'https://b9a12-server-side-shameha.vercel.app'
 })
 const useAxiosSecure = () => {
     const navigate = useNavigate();
@@ -31,5 +31,4 @@ const useAxiosSecure = () => {
       })
     return axiosSecure;
 };
-
 export default useAxiosSecure;

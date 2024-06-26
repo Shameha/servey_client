@@ -19,7 +19,7 @@ const Faq = () => {
     const[reviews,setReviews]= useState([]);
     useEffect(()=>{
     
-fetch('https://assignment12-server-theta.vercel.app/reviews')
+fetch('https://b9a12-server-side-shameha.vercel.app/reviews')
 .then(res=> res.json())
 .then(data =>setReviews(data))
 
